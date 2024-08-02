@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Resume</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.5.136/pdf_viewer.min.css" integrity="sha512-dbJOtZ3VfH52HMyZ0hz6HcLVK0bESRU396ht5fz4EC6icMeT0MKSYxp6LoydBDaMUHiAGjnI9vA3hZRcCc2Fxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
@@ -19,42 +21,30 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-white" rel="noopener" target="_blank" aria-current="page" href="https://1drv.ms/b/s!Am1lpT2tO-0qjoMVnuIK7AhNnLFEig?e=B40qtF">Resume</a>
+                    <a class="nav-link text-white" rel="noopener" target="_blank" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" rel="noopener" target="_blank" href="https://pythonprogrammer00.blogspot.com/">Blog</a>
+                    <a class="nav-link text-primary" aria-current="page" href="resume.html">Resume</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="projects.html">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-primary" href="contact.html">Contact</a>
+                    <a class="nav-link text-white" rel="noopener" target="_blank" href="https://pythonprogrammer00.blogspot.com/">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="mailto:satyavenkata5202@gmail.com?subject=Hello">Email</a>
                 </li>
                 </ul>
             </div>
         </div>
         </nav>
-        <!-- Contact Form -->
-        <div class="container my-5">
-            <h1 class="text-center mb-4 text-white">Contact me !</h1>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label text-white">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label text-white">Message</label>
-                            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-outline-primary w-25">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <!-- Resume Viewer -->
+        <!-- <object data="assets/resume.pdf" class="resume-viewer" type="application/pdf" width="100%" height="100%">
+            <p>Your Browser doesn't support Object tag Download my Resume <a href="assets/resume.pdf">to the PDF!</a></p>
+          </object> -->
+        <iframe src="https://onedrive.live.com/embed?resid=2AED3BAD3DA5656D%21229781&authkey=!AHFyDfFVbN-sJ6U&em=2" class="resume-viewer" width="100%" frameborder="0" scrolling="no"></iframe>
+        
         <footer class="d-flex justify-content-center mb-5">
             <div class="text-white ">BUILT WITH ❤️ BY VENKATA SATYA</div>
         </footer>

@@ -231,3 +231,9 @@
 		width: 100%;
 	}
 }
+
+/* Resume page */
+.resume-viewer{
+    height: 100vh;
+    border-radius: 1rem;
+}
