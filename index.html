@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+<body class="bg-black">
+  <div class=""></div>
+    <div class="container bg-black">
+      <!-- Nav bar  -->
+        <nav class="navbar navbar-expand-lg bg-black">
+          <div class="container-fluid bg-black">
+            <a id="kvs" class="navbar-brand text-primary" href="index.html">K.V.S</a>
+            <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-primary" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" rel="noopener" target="_blank" aria-current="page" href="https://1drv.ms/b/s!Am1lpT2tO-0qjoMVnuIK7AhNnLFEig?e=B40qtF">Resume</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" rel="noopener" target="_blank" href="https://pythonprogrammer00.blogspot.com/">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="projects.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="mailto:satyavenkata5202@gmail.com?subject=Hello">Email</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+      <!-- Name and Terminal -->
+      <div class="container bg-black d-flex flex-wrap justify-content-center mb-5 name-terminal">
+        <div id="name_links" class="flex-column mx-4 mb-5 mb-sm-5" >
+          <div class="h1 myname text-white text-center text-md-start">
+            HI, I’M <span class="text-primary myname-color">VENKATA SATYA</span> <br> I AM <span class="text-break iam-txt"></span> 
+          </div>
+          <div class="h3 mytag mt-3 text-white text-center text-md-start">
+            I Love Building API’s and frequently work on <br> Django Rest Framework
+          </div>
+          <div class="text-white text-center text-md-start"> Social Links to make connections 🙂</div>
+          <div class="social-links d-flex mt-5 justify-content-center">
+            <a class="mx-2" target="_blank" rel="noopener" href="https://www.linkedin.com/in/venkata-satya5202/"> <img  src="assets/images/linkedin.png" alt="Linkedin" srcset=""> </a> 
+            <a class="mx-2" target="_blank" rel="noopener" href="https://github.com/VenkataSatyakoppula"> <img  src="assets/images/github.png" alt="Github" srcset=""> </a>
+            <a class="mx-2" target="_blank" rel="noopener" href="https://leetcode.com/u/VenkataSatyakoppula/"> <img  src="assets/images/leetcode.png" alt="Leetcode" srcset=""> </a>
+          </div>
+          <div class="mt-4 text-center">
+           <a href="assets/resume.pdf" download="resume_venkata_satya_koppula.pdf" class="btn btn-outline-success mt-4 mx-2">Download Resume</button>
+           <a href="projects.html" class="btn btn-outline-primary mt-4 mx-2">Projects</a>
+          </div>
+        </div>
+        <div class="terminal" id="terminal" class="mx-4">
+          <div class="mx-2">
+            <div id="terminal-data" class="text-white">
+              <pre class="Greeting d-none d-lg-block mx-2">  <!--  Display only on large Devices -->
+ _   _______  ____ _____ _________     _______ _______  _____ 
+| | / / __/ |/ / //_/ _ /_  __/ _ |   / __/ _ /_  __| \/ / _ |
+| |/ / _//    / ,< / __ |/ / / __ |  _\ \/ __ |/ /   \  / __ |
+|___/___/_/|_/_/|_/_/ |_/_/ /_/ |_| /___/_/ |_/_/    /_/_/ |_| 
+
+
+</pre>
+              <pre class="Greeting .d-none .d-sm-block d-lg-none mx-2">  <!--  Display only on small Devices -->
+ _   _______  ____ _____ _________  
+| | / / __/ |/ / //_/ _ /_  __/ _ | 
+| |/ / _//    / ,< / __ |/ / / __ | 
+|___/___/_/|_/_/|_/_/ |_/_/ /_/ |_|   
+    _______ _______  _____ 
+   / __/ _ /_  __| \/ / _ |
+  _\ \/ __ |/ /   \  / __ |
+ /___/_/ |_/_/    /_/_/ |_|
+
+              </pre>
+                Welcome to My terminal! <br>
+                Type 'ls' for a list of available commands
+
+            </div>
+            <div class="input-line mt-2">
+              <span class="prompt-color mx-1">venkata@local:~$</span>
+              <span id="get-command" class="text-white"></span>
+              <span class="cursor"></span>
+              <textarea name="prompt" id="commandInput" spellcheck="false" autofocus></textarea>
+          </div>
+          </div>
+
+        </div>
+      </div> 
+      <!-- Footer  -->
+      <footer class="d-flex justify-content-center mb-5">
+        <div class="text-white ">BUILT WITH ❤️ BY VENKATA SATYA</div>
+      </footer>
+      
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/js/projects.js"></script>
+    <script src="assets/js/my_animations.js"></script>
+    <script src="assets/js/terminal.js"></script>
+    </body>
+</html>

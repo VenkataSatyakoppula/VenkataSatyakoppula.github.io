@@ -1,0 +1,233 @@
+
+/* Index page  */
+#kvs{
+    font-weight: 800;
+    font-size: 36px;
+}
+.nav-link{
+    font-weight: 600;
+    font-size: 20px;
+}
+.myname{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    /* height: 96px;
+    width: 450.87px; */
+}
+.mytag {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.name-terminal{
+    margin-top: 5rem;
+}
+
+#terminal{
+    width: 593px;
+    height: 392px;
+    background: #222222;
+    border-radius: 15px;
+    overflow-y: auto;
+    font-family: monospace;
+}
+.input-line {
+    display: flex;
+}
+.input-line textarea{
+    width: 100%;
+    background-color: #222222;
+    border: none;
+    margin-left: 7px;
+    color: transparent;
+    resize: none; /* Disable resizing */
+    outline: none; /* Remove outline */
+    cursor: text;
+}
+.prompt-color{
+    color: green;
+}
+/* Default scrollbar styles */
+/* Terminal Designs */
+::-webkit-scrollbar {
+    width: 0px; /* Width of the scrollbar */
+}
+#terminal::-webkit-scrollbar{
+    width: 10px; /* Width of the scrollbar */
+}
+
+#terminal::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 6px;
+}
+#terminal::-webkit-scrollbar-thumb:hover{
+    background: #7082FB;
+}
+.cursor {
+    width: 10px; /* Width of the cursor */
+    height: 20px; /* Height of the cursor */
+    background-color: white; /* Cursor color */
+    animation: blink 0.75s step-start infinite; /* Blinking animation */
+}
+.terminal-line{
+    margin-top: -0.1rem;
+    margin-bottom: -0.3rem;
+}
+.terminal-link {
+    background-color: #222222;
+    color: white;
+    text-decoration: none;
+}
+
+.terminal-link:hover {
+    background-color: #7082FB;
+}
+@keyframes blink {
+    50% {
+        opacity: 0; /* Hide cursor at 50% */
+    }
+}
+
+/* HTML: <div class="loader"></div> */
+.joke-load,.project-loader  {
+    width: 60px;
+    height: 10px;
+    -webkit-mask:linear-gradient(90deg,#000 70%,#0000 0) 0/20%;
+    background:
+     linear-gradient(#7082FB 0 0) 0/0% no-repeat
+     #ddd;
+    animation: l4 2s infinite steps(6);
+  }
+  @keyframes l4 {
+      100% {background-size:120%}
+  }
+
+.Greeting{
+    margin-bottom: -2rem;
+}
+
+/* Text type-write */
+.iam-txt{
+    border-right: 3px solid white;
+    animation: name_blink2 1s infinite;
+}
+@keyframes name_blink2 {
+    50% {
+        border-color: #000; /* Hide cursor at 50% */
+    }
+}
+
+.social-links * {
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+}
+.social-links *:hover {
+    animation: bounce 0.5s ease;
+}
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+/* .navbar-nav{
+    border-bottom: 1px #7082FB solid;
+} */
+.navbar-nav .nav-item{
+    border-bottom: 0.16rem #0000 solid;
+}
+.navbar-nav .nav-item:hover{
+    border-bottom: 0.16rem #7082FB solid;
+}
+
+
+/* Projects Page */
+
+.project-card{
+    transition: transform 0.3s ease;
+    background-color: #000;
+    border-radius: 5%;
+}
+
+.project-card:hover{
+    background-color: #222222;
+    transform: translateY(-8px);
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #14A44D;
+    border-radius: 50%;
+    display: inline-block;
+}
+.card-text{
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    cursor: pointer;
+}
+.modal-content{
+    background-color: #222222;
+}
+.images-modal{
+    cursor: pointer;
+}
+.project-images img{
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 1%;
+}
+
+#project-search-bar{
+    background-color: #222222;
+    caret-color: white;
+    color: white;
+    
+}
+#project-search-bar:focus{
+    outline: none;
+    
+}
+#project-search-bar::placeholder{
+    color: white;
+}
+
+#project-search-bar:focus::placeholder {
+    color: transparent;
+}
+
+.card-title{
+	position: relative;
+	font-size: 18px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.card-title-border{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0;
+
+	border-bottom: solid 0.18rem #7082FB;
+    
+}
+
+.card-title:hover .card-title-border{
+    animation: border_anim 0.25s linear forwards;
+}
+
+
+@keyframes border_anim {
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
+}
