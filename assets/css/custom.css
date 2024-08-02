@@ -44,7 +44,7 @@
     color: transparent;
     resize: none; /* Disable resizing */
     outline: none; /* Remove outline */
-    cursor: text;
+    cursor: none;
 }
 .prompt-color{
     color: green;
