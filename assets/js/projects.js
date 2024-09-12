@@ -1,8 +1,8 @@
 var projects = `[
     {
         "title":"Movie Playlist",
-        "live":false,
-        "deploy":"https://example.com",
+        "live":true,
+        "deploy":"https://projects.venkata.work",
         "github":"https://github.com/VenkataSatyakoppula/Movie_playlist",
         "desc":"The application has user authentication, allowing users to search for movies and view details on the home screen. Users can create public or private movie lists, with public lists accessible via a link and private lists only visible to the creator.",
         "tags":["python","django","html","css","js"],
