@@ -14,5 +14,8 @@
     "gulp": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.77.8"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
   }
 }
