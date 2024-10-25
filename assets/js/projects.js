@@ -37,8 +37,8 @@ var projects = `[
     },
     {
         "title":"ML data visualization(team)",
-        "live":false,
-        "deploy":"https://example.com",
+        "live":true,
+        "deploy":"https://projects.venkata.work/dic",
         "github":"https://github.com/VenkataSatyakoppula/dic_phase3_vkoppula",
         "desc":"This project is a website that Does Cleaning and EDA on ML data also checks ML model performance after cleaning and scaling. Only works on data that need yes or no as output",
         "tags":["php","python","ML","Docker"],
