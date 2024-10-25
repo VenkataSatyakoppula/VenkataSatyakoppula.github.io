@@ -6,17 +6,20 @@ $(document).ready(function(){
         let clicked_title = "";
         let desc = "";
         if ($(e.currentTarget).attr('class').split(" ")[0] == "card-title"){
+          let id = Number($(e.currentTarget).attr('id'));
           clicked_title = $(this).text();
           desc = $(this).next().next().text();
+          window.open(projs[id].deploy,"_blank");
+          return;
         }else{
           clicked_title = $(this).prev().prev().text();
           desc = $(this).text();
-        }
-        $(".project-images").html("");
-        $(".project-description").html(desc);
-        $(".modal-title").html(clicked_title)
-        $("#project-view").modal("show");
-        
+        } 
+      $(".project-images").html("");
+      $(".project-description").html(desc);
+      $(".modal-title").html(clicked_title)
+      $("#project-view").modal("show");
+
     });
 
     $(document).on("click",".images-modal",function (e) { 
