@@ -4,6 +4,13 @@ $(document).ready(function() {
        $("#commandInput").focus();
     });
 
+
+    function resetTerminal(command) {
+        $('#terminal-data').append('<div class="text-white mt-2"><span class="prompt-color mx-1" >venkata@local:~$</span>' + command + '</div>');
+        $("#commandInput").val(''); // Clear input
+        $("#get-command").text("");
+    }
+
     let ls = [
         ["about","&nbsp;&nbsp;&nbsp;&nbsp;A breif introduction"],
         ["social" ,"&nbsp;&nbsp;&nbsp;Social media links"],
@@ -53,7 +60,7 @@ $(document).ready(function() {
             case 'ls':
                 for (let i = 0; i < data.length; i++) {
                     const element = data[i];
-                    final_html += `<p class="mx-2 terminal-line"><span class="cmd text-primary"> ${element[0]} </span>${element[1]} </p>`
+                    final_html += `<p class="mx-2 terminal-line lscmd"><span class="cmd text-primary"> ${element[0]} </span>${element[1]} </p>`
                 }
                 break;
             case 'social':
@@ -83,7 +90,7 @@ $(document).ready(function() {
                 }
                 break;
             default:
-                response = 'Command not found: ' + command;
+                response = 'Command not found: ' + command + "type 'ls' to list all commands";
             
         }
         return final_html
@@ -97,13 +104,18 @@ $(document).ready(function() {
         if (e.which === 13) { // Enter key
             e.preventDefault(); // Prevent new line in textarea
             const command = $("#get-command").text();
-            $('#terminal-data').append('<div class="text-white mt-2"><span class="prompt-color mx-1" >venkata@local:~$</span>' + command + '</div>');
-            $(this).val(''); // Clear input
-            $("#get-command").text("");
+            resetTerminal(command);
             // Process the command
             processCommand(command);
         }
     });
+    $(document).on('click',".lscmd",function(){
+        let cmd = $(this).children(":first").text();
+        resetTerminal(cmd.trim());
+        setTimeout(function() {
+        processCommand(cmd.trim());
+        },200);
+     });
  
   async  function processCommand(command) {
         let response;
@@ -123,7 +135,7 @@ $(document).ready(function() {
                 break;
             case 'joke':
                 $('#terminal-data').append('<div class="text-white joke-load"></div>');
-                response = await renderCmd(command,'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart');
+                response = await renderCmd(command,'https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Pun,Spooky?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart');
                 $('.joke-load').remove();
                 break;
             case 'banner':
@@ -136,10 +148,15 @@ $(document).ready(function() {
                 $('#terminal-data').html(''); // Clear terminal
                 return; // Exit the function
             default:
-                response = 'Command not found: ' + command;
+                response = 'Command not found: ' + command + "<br>Please type 'ls' to list all commands";
         }
         $('#terminal-data').append('<div class="text-white">' + response + '</div>');
-        console.log($('#terminal-data')[0].scrollHeight)
-        $('#terminal-data').scrollTop($('#terminal-data')[0].scrollHeight); // Scroll to bottom
+        $('#terminal').scrollTop($('#terminal-data')[0].scrollHeight);
     }
+
+    resetTerminal("ls");
+    setTimeout(function() {
+    processCommand("ls");
+    },200);
+    
  });

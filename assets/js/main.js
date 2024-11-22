@@ -30,9 +30,7 @@ $(document).ready(function(){
       let images = ``
       $(".modal-title").html(clicked_title);
       $(".project-description").html("");
-      console.log(projs[clicked_id].images)
       let [folder_name , total_images] = projs[clicked_id].images
-      console.log(folder_name,total_images)
       if( projs[clicked_id].images.length !== 0){
             images += `<p class="text-white text-center my-n2">Project Screenshots</p>`
             for (let i = 1; i < total_images; i++) {
@@ -102,7 +100,7 @@ $(document).ready(function(){
         
         $(".project-loader").addClass("d-none");
      }
-     LoadProjects(projs)
+     LoadProjects(projs);
 
 })
 

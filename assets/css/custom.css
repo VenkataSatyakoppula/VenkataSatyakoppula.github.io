@@ -55,7 +55,7 @@
     width: 0px; /* Width of the scrollbar */
 }
 #terminal::-webkit-scrollbar{
-    width: 10px; /* Width of the scrollbar */
+    width: 8px; /* Width of the scrollbar */
 }
 
 #terminal::-webkit-scrollbar-thumb{
@@ -83,6 +83,11 @@
 
 .terminal-link:hover {
     background-color: #7082FB;
+}
+
+.lscmd:hover {
+    background-color: green;
+    cursor: pointer;
 }
 @keyframes blink {
     50% {
