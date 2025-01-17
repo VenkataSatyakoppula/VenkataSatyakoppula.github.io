@@ -1,7 +1,7 @@
 var projects = `[
     {
         "title":"Movie Playlist",
-        "live":true,
+        "live":false,
         "deploy":"https://projects.venkata.work",
         "github":"https://github.com/VenkataSatyakoppula/Movie_playlist",
         "desc":"The application has user authentication, allowing users to search for movies and view details on the home screen. Users can create public or private movie lists, with public lists accessible via a link and private lists only visible to the creator.",
@@ -37,7 +37,7 @@ var projects = `[
     },
     {
         "title":"ML data visualization(team)",
-        "live":true,
+        "live":false,
         "deploy":"https://projects.venkata.work/dic",
         "github":"https://github.com/VenkataSatyakoppula/dic_phase3_vkoppula",
         "desc":"This project is a website that Does Cleaning and EDA on ML data also checks ML model performance after cleaning and scaling. Only works on data that need yes or no as output",
